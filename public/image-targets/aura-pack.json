@@ -1,0 +1,23 @@
+{
+  "imagePath": "image-targets/aura-pack_luminance.png",
+  "metadata": null,
+  "name": "aura-pack",
+  "type": "PLANAR",
+  "properties": {
+    "left": 0,
+    "top": 17,
+    "width": 800,
+    "height": 1067,
+    "isRotated": false,
+    "originalWidth": 800,
+    "originalHeight": 1100
+  },
+  "resources": {
+    "originalImage": "aura-pack_original.png",
+    "croppedImage": "aura-pack_cropped.png",
+    "thumbnailImage": "aura-pack_thumbnail.png",
+    "luminanceImage": "aura-pack_luminance.png"
+  },
+  "created": 1795623398625,
+  "updated": 1795623398625
+}

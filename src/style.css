@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root { color-scheme: dark; font-family: 'DM Sans', sans-serif; background: #101511; color: #f5f3e9; }
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { background: radial-gradient(ellipse at 20% 20%, #233d31 0, #101511 54%); }
+.intro { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding: max(28px, env(safe-area-inset-top)) 26px max(24px, env(safe-area-inset-bottom)); background: radial-gradient(ellipse at 85% 40%, #264632 0, transparent 48%); }
+.brand-mark { font: 800 13px 'Manrope', sans-serif; letter-spacing: .2em; color: #d5f26b; }
+.brand-mark span { color: #f5f3e9; font-weight: 500; }
+.intro-copy { max-width: 510px; margin: 0 auto; align-self: center; }
+.eyebrow { color: #b7d77a; letter-spacing: .17em; font-size: 10px; font-weight: 700; }
+h1 { font: 800 clamp(42px, 11vw, 76px)/.98 'Manrope', sans-serif; letter-spacing: -.06em; margin: 20px 0; }
+.intro-copy > p:last-child { max-width: 390px; color: #bdc6b8; font-size: 16px; line-height: 1.6; }
+.start-button { width: 100%; max-width: 470px; margin: 0 auto; border: 0; border-radius: 999px; padding: 18px 22px; background: #d5f26b; color: #172018; font: 700 16px 'DM Sans', sans-serif; cursor: pointer; }
+.start-button:disabled { opacity: .52; cursor: wait; }
+.fine-print { margin: 13px auto 0; color: #8c988e; font-size: 11px; text-align: center; }
+.status { position: absolute; z-index: 4; left: 50%; bottom: max(28px, env(safe-area-inset-bottom)); transform: translateX(-50%); padding: 11px 15px; border: 1px solid #ffffff24; border-radius: 30px; background: #101511d9; color: white; font-size: 13px; white-space: nowrap; pointer-events: none; }
+.scene-root { position: absolute; inset: 0; }
+a-scene { position: absolute; inset: 0; }
+.close-button { position: absolute; z-index: 5; top: max(22px, env(safe-area-inset-top)); right: 18px; border: 1px solid #ffffff66; border-radius: 99px; padding: 10px 15px; background: #101511c9; color: white; font: 600 13px 'DM Sans', sans-serif; }
+.error { position: absolute; z-index: 10; inset: 0; display: grid; place-content: center; padding: 28px; background: #101511; color: white; text-align: center; line-height: 1.6; }
+.error[hidden], .close-button[hidden] { display: none; }
+@media (min-width: 700px) { .intro { padding-left: 8vw; padding-right: 8vw; } }

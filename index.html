@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#101511" />
+    <title>Aura Botanicals | Packaging AR Demo</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@8thwall/engine@0.1.0/dist/xr.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main id="intro" class="intro">
+      <div class="brand-mark">AURA <span>BOTANICALS</span></div>
+      <div class="intro-copy">
+        <p class="eyebrow">CONNECTED PACKAGING · TECH DEMO</p>
+        <h1>Bring the pack to life.</h1>
+        <p>Point your camera at the Aura package artwork. The 3D layer should stay anchored as you move the package.</p>
+      </div>
+      <button id="start" class="start-button" disabled>Loading image target…</button>
+      <p class="fine-print">Camera access is used only for the live AR experience.</p>
+    </main>
+
+    <div id="status" class="status" role="status" aria-live="polite">Preparing the image target…</div>
+    <div id="scene-root" class="scene-root"></div>
+    <button id="close" class="close-button" hidden aria-label="Close AR">Close</button>
+    <div id="error" class="error" hidden></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
