@@ -5,6 +5,7 @@
 html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
 body { background: radial-gradient(ellipse at 20% 20%, #233d31 0, #101511 54%); }
 .intro { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding: max(28px, env(safe-area-inset-top)) 26px max(24px, env(safe-area-inset-bottom)); background: radial-gradient(ellipse at 85% 40%, #264632 0, transparent 48%); }
+.intro[hidden] { display: none; }
 .brand-mark { font: 800 13px 'Manrope', sans-serif; letter-spacing: .2em; color: #d5f26b; }
 .brand-mark span { color: #f5f3e9; font-weight: 500; }
 .intro-copy { max-width: 510px; margin: 0 auto; align-self: center; }

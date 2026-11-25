@@ -46,12 +46,19 @@ function updateReadyState() {
 }
 
 function onEngineLoaded() {
+  if (!window.XR8?.XrController) {
+    engineReady = false
+    startButton.disabled = true
+    startButton.textContent = 'AR engine failed to load'
+    setStatus('The AR engine did not initialize. Reload this page to retry.')
+    return
+  }
   engineReady = true
   updateReadyState()
 }
 
 window.addEventListener('xrloaded', onEngineLoaded)
-if (window.XR8) onEngineLoaded()
+if (window.XR8?.XrController) onEngineLoaded()
 
 loadTarget()
 
