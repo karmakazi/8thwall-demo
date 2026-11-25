@@ -1,0 +1,23 @@
+{
+  "imagePath": "image-targets/chips-ahoy_luminance.png",
+  "metadata": null,
+  "name": "chips-ahoy",
+  "type": "PLANAR",
+  "properties": {
+    "left": 4,
+    "top": 0,
+    "width": 858,
+    "height": 1144,
+    "isRotated": false,
+    "originalWidth": 865,
+    "originalHeight": 1144
+  },
+  "resources": {
+    "originalImage": "chips-ahoy_original.png",
+    "croppedImage": "chips-ahoy_cropped.png",
+    "thumbnailImage": "chips-ahoy_thumbnail.png",
+    "luminanceImage": "chips-ahoy_luminance.png"
+  },
+  "created": 1795628458361,
+  "updated": 1795628458361
+}

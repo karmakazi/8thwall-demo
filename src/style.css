@@ -19,6 +19,8 @@ h1 { font: 800 clamp(42px, 11vw, 76px)/.98 'Manrope', sans-serif; letter-spacing
 .scene-root { position: absolute; inset: 0; }
 a-scene { position: absolute; inset: 0; }
 .close-button { position: absolute; z-index: 5; top: max(22px, env(safe-area-inset-top)); right: 18px; border: 1px solid #ffffff66; border-radius: 99px; padding: 10px 15px; background: #101511c9; color: white; font: 600 13px 'DM Sans', sans-serif; }
+.action-button { position: absolute; z-index: 5; left: 50%; bottom: max(72px, calc(env(safe-area-inset-bottom) + 64px)); transform: translateX(-50%); border: 0; border-radius: 99px; padding: 13px 18px; background: #d5f26b; color: #172018; font: 700 14px 'DM Sans', sans-serif; white-space: nowrap; }
+.action-button[hidden] { display: none; }
 .error { position: absolute; z-index: 10; inset: 0; display: grid; place-content: center; padding: 28px; background: #101511; color: white; text-align: center; line-height: 1.6; }
 .error[hidden], .close-button[hidden] { display: none; }
 @media (min-width: 700px) { .intro { padding-left: 8vw; padding-right: 8vw; } }

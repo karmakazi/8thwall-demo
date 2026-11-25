@@ -1,45 +1,33 @@
-# 8th Wall CPG image-target demo
+# Chips Ahoy! package breakout demo
 
-A minimal WebAR validation build using the open-source 8th Wall engine. It tracks a flat sample package panel and anchors a small animated product reveal to it. The demo uses image targets only, so world tracking is disabled.
+A WebAR prototype using the open-source 8th Wall image-target engine. The supplied Chips Ahoy! package artwork is the marker. When recognized, an original voxel-style snack creature bursts through the pack artwork, pops forward, and can be replayed.
 
-## 1. Generate the image target
+## Prepare the marker
 
-The image-target CLI converts artwork into the metadata and feature image the engine needs.
+The attached package image must be available locally as `assets/chips-ahoy.png`.
 
-1. Install Node.js 20 or newer.
-2. From this folder, run `npx @8thwall/image-target-cli@latest`.
-3. Choose `assets/aura-pack-front.png` as the source image.
-4. Choose a flat/planar target and name it `aura-pack`.
-5. Save the generated output in `public/image-targets/`.
-6. Make sure the generated JSON is named `aura-pack.json`. Keep the generated target image beside it and preserve the relative path in its `imagePath` field.
+1. From this folder run `npx @8thwall/image-target-cli@latest`.
+2. Select `assets/chips-ahoy.png`, choose a flat/planar target, and name it `chips-ahoy`.
+3. Save the generated target JSON and image files in `public/image-targets/`.
+4. Ensure the JSON is named `chips-ahoy.json` and keep its generated `imagePath` image in the same folder.
 
-The generated JSON and target image are deliberately not included: they are derived from the editable source artwork by 8th Wall's official target processor.
+The page looks for `/image-targets/chips-ahoy.json`. The target processor's other outputs can remain beside it.
 
-## 2. Run it
+## Run locally
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite on the development computer. Camera access requires a secure context. To test on a phone, deploy the folder to an HTTPS static host, then open the HTTPS URL on the phone. The phone must have internet access for the pinned 8th Wall and A-Frame scripts used by this starter.
+Open the local URL shown by Vite. Camera access requires HTTPS on a phone, so deploy to Vercel or another HTTPS host for iPhone testing.
 
-## What to validate
+## Demo flow
 
-- Does the artwork acquire reliably from normal package viewing distances?
-- Does the anchored overlay remain stable while tilting and rotating the carton?
-- How does tracking behave under glare, uneven lighting, motion, and partial hand occlusion?
-- Does the user understand the camera prompt and what to point at?
-- Is the effect worth the scan and camera-permission steps?
+- Tap Start camera.
+- Point the camera at the package marker.
+- On recognition, the creature and package shards burst outward from the marker.
+- Tap Make it burst again to replay the animation.
+- The AR content hides when the marker is lost and reappears when it is found again.
 
-This starter uses a flat carton front. For a bottle, can, cup, or tapered pack, generate a curved or conical target and tune its geometry to the real package. Repeat testing with production artwork and final print finishes before committing to a campaign.
-
-## Files
-
-- `assets/aura-pack-front.png`: sample artwork to process and print.
-- `src/main.js`: camera scene, marker configuration, anchored reveal, and tracking status.
-- `src/style.css`: mobile intro and status UI.
-
-## Notes
-
-This is a technical validation prototype, not a production campaign build. The engine and XR Extras are loaded from jsDelivr; for production, pin and self-host the runtime assets, review the 8th Wall open-source license and dependency licenses, and add analytics/privacy handling appropriate to the campaign.
+The game content is attached to the printed target and uses image tracking only. Keep the package in view while playing.
